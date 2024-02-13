@@ -1,6 +1,6 @@
 cotas_com_sobra = 0
 valor_sobra = 0
-sobra_valor = []
+sobra_valor = list()
 
 def calculo_resto_divisao(valor_cota, aporte):
     global sobra_valor
@@ -21,14 +21,14 @@ def calcular_cotas_com_sobra(valor_cota, lista_valores_sobra):
         indice = lista_valores_sobra[-1]
         if indice >= valor_cota:
             cotas_com_sobra = calcular_cotas_por_aporte(valor_cota, indice)
-            print('\nValor suficiente!\nCotas -> {}'.format(cotas_com_sobra))
+            print('\n+++++++++++++++++++++++++++++++++++++\nValor suficiente! -> {} cota(s)\n+++++++++++++++++++++++++++++++++++++'.format(cotas_com_sobra))
         else:
             cotas_com_sobra = 0
     else:
-        print('\nValor insuficiente!')
+        print('\n+++++++++++++++++++++++++++\nValor insuficiente!\n+++++++++++++++++++++++++++')
 
     return cotas_com_sobra
 
-def retorna_lista():
+def retorna_lista_cotas():
     global sobra_valor
     return sobra_valor

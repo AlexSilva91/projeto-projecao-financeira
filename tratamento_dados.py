@@ -35,6 +35,5 @@ def divididendo_mais_recente(dados):
         dados_da_data = dados["Weekly Adjusted Time Series"][data]
         dividendo = dados_da_data.get("7. dividend amount")
         if dividendo and float(dividendo) > 0.0:
-            print('O primeiro dividendo maior ou igual a zero para a data {} é: {:.2f}'.format(data, float(dividendo)))
-            return 
+            return float(dividendo)
 
