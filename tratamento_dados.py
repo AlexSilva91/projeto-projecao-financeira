@@ -30,7 +30,6 @@ def obter_close_mais_recente(dados):
     else:
         return None 
     
-    
 def divididendo_mais_recente(dados):
     for data in sorted(dados["Weekly Adjusted Time Series"], reverse=True):
         dados_da_data = dados["Weekly Adjusted Time Series"][data]
