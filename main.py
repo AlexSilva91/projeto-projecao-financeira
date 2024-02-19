@@ -3,7 +3,7 @@ import tratamento_dados
 import calculo
 
 nome_cota = 'SNAG11'
-aporte = 150
+aporte = 300
 tempo_meses = 48
 # Chamar a função para obter dados
 dados = obter_dados(nome_cota)
@@ -30,10 +30,8 @@ def progessao_investimento(nome_cota, aporte, tempo_meses, valor_cota, dv_por_co
             #a cada novo aporte ele soma o valor anterior com o novo valor que será adcionado
             x += item
             lista_cotas_fomatadas.append(float(float('{:.2f}'.format(x))))
-    
     #Acrescenta novas cotas com o valor que sobrou de cada aporte realizada. 
     cotas += calculo.calcular_cotas_com_sobra(valor_cota, lista_cotas_fomatadas)
-
     #Calcula o dividendo total
     dv_total += calculo.calcular_dividendos(cotas, dv_por_cota)
     dic_progressao['nome_cota'] = nome_cota
