@@ -3,8 +3,8 @@ import tratamento_dados
 import calculo
 
 nome_cota = 'SNAG11'
-aporte = 300
-tempo_meses = 48
+aporte = 150
+tempo_meses = 12
 # Chamar a função para obter dados
 dados = obter_dados(nome_cota)
 #tratamento_dados.salvar_dados(dados)
